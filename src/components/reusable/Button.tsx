@@ -11,7 +11,7 @@ const Button: React.FC<ButtonProps> = ({
 	switch (className) {
 		case 'primary':
 			btnClasses =
-				'bg-primaryDark text-white hover:bg-primaryLight focus:bg-primaryLight';
+				'bg-primaryDark rounded-[.4rem] text-white hover:bg-primaryLight focus:bg-primaryLight';
 			break;
 		case 'nav':
 			btnClasses = 'bg-darkGray300 hover:bg-primaryDark focus:bg-primaryDark';
@@ -25,7 +25,7 @@ const Button: React.FC<ButtonProps> = ({
 
 	return (
 		<button
-			className={`flex items-center py-3 px-4 outline-none font-regular text-[1.5rem] rounded-[.4rem] transition-colors duration-300 ${btnClasses}`}
+			className={`flex items-center py-3 px-4 outline-none font-regular text-[1.5rem] transition-colors duration-300 ${btnClasses}`}
 			onClick={onClick}
 			aria-label={aria}
 		>
