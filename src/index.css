@@ -3,14 +3,26 @@
 @tailwind utilities;
 
 html {
-  font-size: 62.5%;
+	font-size: 62.5%;
 }
 
-body {  
-  background: #ffff;
+body {
+	background: #ffff;
 }
 
 .dark body {
-  background: #151619;
+	background: #151619;
 }
 
+.header__btns > button:first-of-type {
+	margin-right: 1rem;
+}
+
+.icon > svg > path {
+	transition: fill 0.3s;
+}
+
+.icon:hover > svg > path,
+.icon:focus > svg > path {
+	fill: #e46643;
+}
