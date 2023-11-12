@@ -14,6 +14,7 @@ module.exports = {
 				md: '768px',
 				lg: '992px',
 				xl: '1200px',
+				xxl: '2200px',
 			},
 			colors: {
 				black300: '#151619',
@@ -28,6 +29,10 @@ module.exports = {
 				white: '#FFFFFF',
 				primaryDark: '#E46643',
 				primaryLight: '#F39765',
+			},
+			boxShadow: {
+				dark: '0px 0px 21px -4px rgba(0, 0, 0, 1)',
+				light: '0px 0px 21px -4px rgba(144, 144, 144, 1)',
 			},
 		},
 	},

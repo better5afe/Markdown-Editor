@@ -1,4 +1,6 @@
-interface ChildrenProps {
+type VoidFn = () => void;
+
+export interface ChildrenProps {
 	children: React.ReactNode;
 }
 
@@ -10,8 +12,16 @@ export interface AriaAttr {
 	aria: string;
 }
 
+// context
+
+export interface NavCtx {
+	isNavOpen: boolean;
+	toggleNav: VoidFn;
+	closeNav: VoidFn;
+}
+
 // reusable components
 
 export interface ButtonProps extends ChildrenProps, ClassNameProps, AriaAttr {
-	onClick: () => void;
+	onClick: VoidFn;
 }

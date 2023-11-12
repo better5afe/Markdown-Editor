@@ -10,6 +10,20 @@ body {
 	background: #ffff;
 }
 
+nav,
+header,
+main {
+	transition: transform 0.5s;
+}
+
+main {
+	min-height: calc(100vh - 5.6rem);
+
+	@media (min-width: 768px) {
+		height: calc(100vh - 7.5rem);
+	}
+}
+
 .dark body {
 	background: #151619;
 }
