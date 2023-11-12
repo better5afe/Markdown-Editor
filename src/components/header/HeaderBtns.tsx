@@ -1,22 +1,19 @@
-import { useContext } from 'react';
 import { useMediaQuery } from '@uidotdev/usehooks';
-import { ModalContext } from '../../context/modal-ctx';
+import { HeaderBtnsProps } from '../../@types/components/component-types';
 import Button from '../reusable/Button';
 import IconDelete from '../../assets/icons/icon-components/IconDelete';
 import SaveIcon from '../../assets/icons/icon-save.svg';
 
-const HeaderBtns = () => {
-	const modalCtx = useContext(ModalContext);
-
+const HeaderBtns: React.FC<HeaderBtnsProps> = ({ onDeleteDoc }) => {
 	let isTablet = useMediaQuery('only screen and (min-width: 768px)');
 
-	const deleteFileHandler = () => {
-		modalCtx.openModal();
+	const deleteDocHandler = () => {
+		onDeleteDoc();
 	};
 
 	return (
 		<div className='header__btns flex jutify-center items-center'>
-			<Button className='icon' onClick={deleteFileHandler}>
+			<Button className='icon' onClick={deleteDocHandler}>
 				<IconDelete />
 			</Button>
 			<Button className='primary' onClick={() => console.log('Save Changes')}>

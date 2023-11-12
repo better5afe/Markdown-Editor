@@ -1,23 +1,22 @@
 import { useEffect, useContext } from 'react';
 import { useTheme } from './hooks/useTheme';
-import { NavCtxProvider } from './context/NavCtxProvider';
-import { ModalContext } from './context/modal-ctx';
+import { AppCtx } from './context/app-ctx';
 import Nav from './components/nav/Nav';
 import Header from './components/header/Header';
 import Main from './components/main/Main';
 import Modal from './components/subcomponents/modal/Modal';
 
 const App = () => {
-	const modalCtx = useContext(ModalContext);
+	const appCtx = useContext(AppCtx);
 
-	const setTheme = useTheme();
+	const currentTheme = useTheme();
 
 	useEffect(() => {
-		setTheme();
+		appCtx.changeTheme(currentTheme);
 	}, []);
 
 	return (
-		<NavCtxProvider>
+		<>
 			<div className='relative flex h-screen xxl:w-[2200px] xxl:mx-auto xxl:overflow-hidden xxl:shadow-light dark:xxl:shadow-dark'>
 				<Nav />
 				<div className='w-full overflow-hidden'>
@@ -25,8 +24,8 @@ const App = () => {
 					<Main />
 				</div>
 			</div>
-			{modalCtx.isModalOpen && <Modal />}
-		</NavCtxProvider>
+			{appCtx.isModalOpen && <Modal />}
+		</>
 	);
 };
 

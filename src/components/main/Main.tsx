@@ -1,17 +1,17 @@
 import { useContext } from 'react';
-import { NavContext } from '../../context/nav-context';
+import { AppCtx } from '../../context/app-ctx';
 
 const Main = () => {
-	const navCtx = useContext(NavContext);
+	const appCtx = useContext(AppCtx);
 
 	const closeNavHandler = () => {
-		navCtx.closeNav();
+		appCtx.closeNav();
 	};
 
 	return (
 		<main
 			className={`w-full bg-white dark:bg-black300 ${
-				navCtx.isNavOpen ? 'translate-x-[250px]' : 'translate-x-0'
+				appCtx.isNavOpen ? 'translate-x-[250px]' : 'translate-x-0'
 			}`}
 			onClick={closeNavHandler}
 		></main>

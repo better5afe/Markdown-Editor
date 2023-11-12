@@ -10,16 +10,17 @@ interface ClassNameProps {
 
 // context
 
-export interface NavCtx {
+export type ChangeThemeFn = (theme: string) => void;
+
+export interface AppCtxObj {
 	isNavOpen: boolean;
 	toggleNav: VoidFn;
 	closeNav: VoidFn;
-}
-
-export interface ModalCtx {
 	isModalOpen: boolean;
 	openModal: VoidFn;
 	closeModal: VoidFn;
+	theme: string;
+	changeTheme: ChangeThemeFn;
 }
 
 // reusable components
@@ -32,6 +33,12 @@ export interface DocumentCardProps {
 	cardType: string;
 	cardTitle: string;
 	documentName: string;
+}
+
+// header
+
+export interface HeaderBtnsProps {
+	onDeleteDoc: VoidFn;
 }
 
 // navigation
