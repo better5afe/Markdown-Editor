@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html {
+  font-size: 62.5%;
+}
+
+body {  
+  background: #ffff;
+}
+
+.dark body {
+  background: #151619;
+}
+
