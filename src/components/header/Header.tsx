@@ -14,7 +14,7 @@ const Header = () => {
 			}`}
 		>
 			<div className='flex items-center'>
-				<NavBtn />
+				<NavBtn isNavOpen={navCtx.isNavOpen} onToggleNav={navCtx.toggleNav} />
 				<HeaderDetails />
 			</div>
 			<HeaderBtns />

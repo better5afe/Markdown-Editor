@@ -1,11 +1,8 @@
-import { useContext } from 'react';
-import { ModalContext } from '../../../context/modal-ctx';
+import { ModalProps } from '../../../@types/components/component-types';
 
-const ModalBackdrop = () => {
-	const modalCtx = useContext(ModalContext);
-
+const ModalBackdrop: React.FC<ModalProps> = ({ onCloseModal }) => {
 	const closeModalHandler = () => {
-		modalCtx.closeModal();
+		onCloseModal();
 	};
 
 	return (

@@ -1,7 +1,12 @@
+import { ModalProps } from '../../../@types/components/component-types';
 import Button from '../../reusable/Button';
 
-const ModalMsg = () => {
+const ModalMsg: React.FC<ModalProps> = ({ onCloseModal }) => {
 	// document name to be changed dynamically
+
+	const deleteDocHandler = () => {
+		onCloseModal();
+	};
 
 	return (
 		<div className='modal w-[34.3rem] p-[2.4rem] bg-white rounded-[.4rem] font-preview dark:bg-black200'>
@@ -12,10 +17,7 @@ const ModalMsg = () => {
 				Are you sure you want to delete the 'welcome.md' document and its
 				contents? This action cannot be reversed.
 			</p>
-			<Button
-				className='primary'
-				onClick={() => console.log('Document deleted')}
-			>
+			<Button className='primary' onClick={deleteDocHandler}>
 				Confirm & Delete
 			</Button>
 		</div>

@@ -1,21 +1,14 @@
-import { useContext } from 'react';
-import { NavContext } from '../../context/nav-context';
+import { NavBtnProps } from '../../@types/components/component-types';
 import Button from '../reusable/Button';
 import IconClose from '../../assets/icons/icon-close.svg';
 import IconMenu from '../../assets/icons/icon-menu.svg';
 
-const NavBtn = () => {
-    const navCtx = useContext(NavContext);
-    
-	const toggleNavHandler = () => {
-		navCtx.toggleNav();
-	};
-
-	let btnIcon = navCtx.isNavOpen ? IconClose : IconMenu;
+const NavBtn: React.FC<NavBtnProps> = ({ isNavOpen, onToggleNav }) => {
+	let btnIcon = isNavOpen ? IconClose : IconMenu;
 
 	return (
-		<Button className='nav' onClick={toggleNavHandler}>
-			<img src={btnIcon} alt=''/>
+		<Button className='nav' onClick={onToggleNav}>
+			<img src={btnIcon} alt='' />
 		</Button>
 	);
 };

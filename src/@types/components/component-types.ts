@@ -33,3 +33,16 @@ export interface DocumentCardProps {
 	cardTitle: string;
 	documentName: string;
 }
+
+// navigation
+
+export interface NavBtnProps {
+	isNavOpen: boolean;
+	onToggleNav: VoidFn;
+}
+
+// modal
+
+export interface ModalProps {
+	onCloseModal: VoidFn;
+}
