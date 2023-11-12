@@ -16,6 +16,12 @@ export interface NavCtx {
 	closeNav: VoidFn;
 }
 
+export interface ModalCtx {
+	isModalOpen: boolean;
+	openModal: VoidFn;
+	closeModal: VoidFn;
+}
+
 // reusable components
 
 export interface ButtonProps extends ChildrenProps, ClassNameProps {

@@ -1,12 +1,15 @@
-import { useEffect } from 'react';
+import { useEffect, useContext } from 'react';
 import { useTheme } from './hooks/useTheme';
 import { NavCtxProvider } from './context/NavCtxProvider';
+import { ModalContext } from './context/modal-ctx';
 import Nav from './components/nav/Nav';
 import Header from './components/header/Header';
 import Main from './components/main/Main';
 import Modal from './components/subcomponents/modal/Modal';
 
 const App = () => {
+	const modalCtx = useContext(ModalContext);
+
 	const setTheme = useTheme();
 
 	useEffect(() => {
@@ -21,8 +24,8 @@ const App = () => {
 					<Header />
 					<Main />
 				</div>
-				<Modal />
 			</div>
+			{modalCtx.isModalOpen && <Modal />}
 		</NavCtxProvider>
 	);
 };
