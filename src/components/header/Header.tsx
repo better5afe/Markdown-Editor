@@ -1,6 +1,7 @@
 import { useContext } from 'react';
 import { NavContext } from '../../context/nav-context';
 import NavBtn from '../nav/NavBtn';
+import HeaderDetails from './HeaderDetails';
 import HeaderBtns from './HeaderBtns';
 
 const Header = () => {
@@ -12,7 +13,10 @@ const Header = () => {
 				navCtx.isNavOpen ? 'translate-x-[250px]' : 'translate-x-0'
 			}`}
 		>
-			<NavBtn />
+			<div className='flex items-center'>
+				<NavBtn />
+				<HeaderDetails />
+			</div>
 			<HeaderBtns />
 		</header>
 	);

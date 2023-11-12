@@ -13,7 +13,7 @@ module.exports = {
 				s: '576px',
 				md: '768px',
 				lg: '992px',
-				xl: '1200px',
+				xl: '1440px',
 				xxl: '2200px',
 			},
 			colors: {
@@ -22,7 +22,7 @@ module.exports = {
 				black100: '#2B2D31',
 				darkGray300: '#35393F',
 				darkGray200: '#5A6069',
-				darkGray100: '#5A6069',
+				darkGray100: '#7C8187',
 				lightGray300: '#C1C4CB',
 				lightGray200: '#E4E4E4',
 				lightGray100: '#F5F5F5',

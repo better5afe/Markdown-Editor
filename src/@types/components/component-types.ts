@@ -25,3 +25,9 @@ export interface NavCtx {
 export interface ButtonProps extends ChildrenProps, ClassNameProps, AriaAttr {
 	onClick: VoidFn;
 }
+
+export interface DocumentCardProps {
+	cardType: string;
+	cardTitle: string;
+	documentName: string;
+}

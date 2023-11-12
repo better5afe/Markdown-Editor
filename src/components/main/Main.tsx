@@ -10,7 +10,7 @@ const Main = () => {
 
 	return (
 		<main
-			className={`w-full ${
+			className={`w-full bg-white dark:bg-black300 ${
 				navCtx.isNavOpen ? 'translate-x-[250px]' : 'translate-x-0'
 			}`}
 			onClick={closeNavHandler}
