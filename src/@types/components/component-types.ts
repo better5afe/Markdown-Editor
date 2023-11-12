@@ -4,7 +4,7 @@ export interface ChildrenProps {
 	children: React.ReactNode;
 }
 
-interface ClassNameProps {
+export interface ClassNameProps {
 	className: string;
 }
 
@@ -46,6 +46,11 @@ export interface HeaderBtnsProps {
 export interface NavBtnProps {
 	isNavOpen: boolean;
 	onToggleNav: VoidFn;
+}
+
+export interface NavThemeTogglerProps {
+	theme: string;
+	changeTheme: ChangeThemeFn;
 }
 
 // modal

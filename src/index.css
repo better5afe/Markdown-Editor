@@ -26,6 +26,10 @@ nav > button {
 	margin-bottom: 1.1rem;
 }
 
+.icon-active path {
+	fill: #ffff;
+}
+
 main {
 	min-height: calc(100vh - 5.6rem);
 

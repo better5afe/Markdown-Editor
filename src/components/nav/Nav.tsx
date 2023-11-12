@@ -28,7 +28,7 @@ const Nav = () => {
 				+ New Document
 			</Button>
 			<NavList />
-			<NavThemeToggler />
+			<NavThemeToggler theme={appCtx.theme} changeTheme={appCtx.changeTheme} />
 		</nav>
 	);
 };
