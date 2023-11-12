@@ -16,9 +16,13 @@ main {
 	transition: transform 0.5s;
 }
 
-nav > button {
+nav > button,
+.modal > button {
 	width: 100%;
-  margin: 2.7rem 0 2.4rem;
+}
+
+nav > button {
+	margin: 2.7rem 0 2.4rem;
 	margin-bottom: 1.1rem;
 }
 
@@ -45,4 +49,38 @@ main {
 .icon:hover > svg > path,
 .icon:focus > svg > path {
 	fill: #e46643;
+}
+
+::-webkit-scrollbar {
+	width: 4px;
+	height: 4px;
+}
+::-webkit-scrollbar-button {
+	width: 0px;
+	height: 0px;
+}
+::-webkit-scrollbar-thumb {
+	background: #2b2d31;
+	border: 0px none #ffffff;
+	border-radius: 50px;
+}
+::-webkit-scrollbar-thumb:hover {
+	background-color: #e46643;
+}
+::-webkit-scrollbar-thumb:active {
+	background-color: #f39765;
+}
+::-webkit-scrollbar-track {
+	background: #1d1f22;
+	border: 0px none #ffffff;
+	border-radius: 50px;
+}
+::-webkit-scrollbar-track:hover {
+	background: #1d1f22;
+}
+::-webkit-scrollbar-track:active {
+	background: #1d1f22;
+}
+::-webkit-scrollbar-corner {
+	background: transparent;
 }

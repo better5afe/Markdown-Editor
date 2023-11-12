@@ -17,6 +17,7 @@ module.exports = {
 				xxl: '2200px',
 			},
 			colors: {
+				blackShadow: '#15161980',
 				black300: '#151619',
 				black200: '#1D1F22',
 				black100: '#2B2D31',
@@ -26,6 +27,7 @@ module.exports = {
 				lightGray300: '#C1C4CB',
 				lightGray200: '#E4E4E4',
 				lightGray100: '#F5F5F5',
+				whiteShadow: '#ffffff50',
 				white: '#FFFFFF',
 				primaryDark: '#E46643',
 				primaryLight: '#F39765',

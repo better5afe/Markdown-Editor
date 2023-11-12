@@ -22,7 +22,6 @@ const Nav = () => {
 			<Button
 				className='primary'
 				onClick={() => console.log('Create new document')}
-				aria='create new document'
 			>
 				+ New Document
 			</Button>

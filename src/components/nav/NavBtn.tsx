@@ -14,8 +14,8 @@ const NavBtn = () => {
 	let btnIcon = navCtx.isNavOpen ? IconClose : IconMenu;
 
 	return (
-		<Button className='nav' onClick={toggleNavHandler} aria='Navigation'>
-			<img src={btnIcon} alt='' aria-hidden='true' />
+		<Button className='nav' onClick={toggleNavHandler}>
+			<img src={btnIcon} alt=''/>
 		</Button>
 	);
 };

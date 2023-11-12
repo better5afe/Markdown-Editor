@@ -8,10 +8,6 @@ interface ClassNameProps {
 	className: string;
 }
 
-export interface AriaAttr {
-	aria: string;
-}
-
 // context
 
 export interface NavCtx {
@@ -22,7 +18,7 @@ export interface NavCtx {
 
 // reusable components
 
-export interface ButtonProps extends ChildrenProps, ClassNameProps, AriaAttr {
+export interface ButtonProps extends ChildrenProps, ClassNameProps {
 	onClick: VoidFn;
 }
 

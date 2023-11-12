@@ -11,23 +11,20 @@ const HeaderBtns = () => {
 			<Button
 				className='icon'
 				onClick={() => console.log('Delete file')}
-				aria='Delete file'
 			>
 				<IconDelete />
 			</Button>
 			<Button
 				className='primary'
 				onClick={() => console.log('Save Changes')}
-				aria='Save changes'
 			>
 				<img
 					src={SaveIcon}
 					alt=''
-					aria-hidden={true}
 					className='pointer-events-none'
 				/>
 				{isTablet && (
-					<span aria-hidden={true} className='pointer-events-none ps-[0.7rem]'>
+					<span className='pointer-events-none ps-[0.7rem]'>
 						Save Changes
 					</span>
 				)}
