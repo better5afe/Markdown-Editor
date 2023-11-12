@@ -3,6 +3,7 @@ import { NavContext } from '../../context/nav-context';
 import Logo from '../../assets/icons/logo.svg';
 import Button from '../reusable/Button';
 import NavList from './NavList';
+import NavThemeToggler from './NavThemeToggler';
 
 const Nav = () => {
 	const navCtx = useContext(NavContext);
@@ -27,6 +28,7 @@ const Nav = () => {
 				+ New Document
 			</Button>
 			<NavList />
+			<NavThemeToggler />
 		</nav>
 	);
 };
