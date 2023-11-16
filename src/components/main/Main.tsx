@@ -1,6 +1,8 @@
 import { useContext } from 'react';
 import { AppCtx } from '../../context/app-ctx';
 import BreadcrumbNav from '../subcomponents/breadcrumb/BreadcrumbNav';
+import Markdown from '../subcomponents/markdown/Markdown';
+import Preview from '../subcomponents/preview/Preview';
 
 const Main = () => {
 	const appCtx = useContext(AppCtx);
@@ -20,6 +22,10 @@ const Main = () => {
 				preview={appCtx.isPreviewVisible}
 				togglePreview={appCtx.togglePreview}
 			/>
+			<div className='flex h-full'>
+				<Markdown preview={appCtx.isPreviewVisible} />
+				<Preview preview={appCtx.isPreviewVisible} />
+			</div>
 		</main>
 	);
 };

@@ -14,7 +14,7 @@ const BreadcrumbNav: React.FC<BreadcrumbNavProps> = ({
 	return (
 		<aside className='flex items-center justify-between px-[1.6rem] bg-lightGray100 text-[1.4rem] font-[500] text-darkGray100 uppercase tracking-[.2rem] dark:bg-black200 dark:text-lightGray300 '>
 			{!preview && (
-				<div className='py-[1.3rem] md:border-r-[.1rem] md:basis-1/2 md:me-[1.6rem] border-lightGray200 dark:border-darkGray200'>
+				<div className='py-[1.3rem] md:border-r-[.1rem] md:basis-1/2 border-lightGray200 dark:border-darkGray200'>
 					<p>Markdown</p>
 				</div>
 			)}
@@ -23,7 +23,7 @@ const BreadcrumbNav: React.FC<BreadcrumbNavProps> = ({
 					preview ? 'basis-full justify-between' : 'basis-1/2 justify-end'
 				}`}
 			>
-				<p className={`md:block ${preview ? 'block' : 'hidden'}`}>Preview</p>
+				<p className={`md:block md:ps-[1.6rem] ${preview ? 'block' : 'hidden'}`}>Preview</p>
 				<Button className='icon' onClick={togglePreviewHandler}>
 					{preview ? <IconHidePreview /> : <IconShowPreview />}
 				</Button>

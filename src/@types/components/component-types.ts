@@ -66,3 +66,7 @@ export interface BreadcrumbNavProps {
 	preview: boolean;
 	togglePreview: VoidFn;
 }
+
+export interface SectionProps {
+	preview: boolean;
+}
