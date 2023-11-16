@@ -32,6 +32,10 @@ export const AppCtxProvider: React.FC<ChildrenProps> = ({ children }) => {
 		setTheme(theme);
 	};
 
+	const toggleThemeHandler = () => {
+		theme === 'light' ? setTheme('dark') : setTheme('light');
+	};
+
 	return (
 		<AppCtx.Provider
 			value={{
@@ -43,6 +47,7 @@ export const AppCtxProvider: React.FC<ChildrenProps> = ({ children }) => {
 				closeModal: closeModalHandler,
 				theme: theme,
 				changeTheme: changeThemeHandler,
+				toggleTheme: toggleThemeHandler,
 			}}
 		>
 			{children}

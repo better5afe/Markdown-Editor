@@ -21,6 +21,7 @@ export interface AppCtxObj {
 	closeModal: VoidFn;
 	theme: string;
 	changeTheme: ChangeThemeFn;
+	toggleTheme: VoidFn
 }
 
 // reusable components
@@ -50,7 +51,7 @@ export interface NavBtnProps {
 
 export interface NavThemeTogglerProps {
 	theme: string;
-	changeTheme: ChangeThemeFn;
+	toggleTheme: VoidFn;
 }
 
 // modal

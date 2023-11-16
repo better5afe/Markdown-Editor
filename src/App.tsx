@@ -1,6 +1,6 @@
 import { useEffect, useContext } from 'react';
-import { useTheme } from './hooks/useTheme';
 import { AppCtx } from './context/app-ctx';
+import { checkMode } from './utils/theme-handler';
 import Nav from './components/nav/Nav';
 import Header from './components/header/Header';
 import Main from './components/main/Main';
@@ -9,10 +9,14 @@ import Modal from './components/subcomponents/modal/Modal';
 const App = () => {
 	const appCtx = useContext(AppCtx);
 
-	const currentTheme = useTheme();
-
 	useEffect(() => {
-		appCtx.changeTheme(currentTheme);
+		const currentTheme = checkMode();
+
+		if (currentTheme === 'light') {
+			appCtx.changeTheme('light');
+		} else {
+			appCtx.changeTheme('dark');
+		}
 	}, []);
 
 	return (

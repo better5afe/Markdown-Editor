@@ -10,4 +10,5 @@ export const AppCtx = React.createContext<AppCtxObj>({
 	closeModal: () => {},
 	theme: '',
 	changeTheme: (theme) => {},
+	toggleTheme: () => {},
 });
