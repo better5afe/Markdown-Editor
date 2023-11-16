@@ -11,7 +11,7 @@ const Main = () => {
 
 	return (
 		<main
-			className={`w-full bg-white dark:bg-black300 transition-colors duration-300 ${
+			className={`w-full bg-white dark:bg-black300 ${
 				appCtx.isNavOpen ? 'translate-x-[250px]' : 'translate-x-0'
 			}`}
 			onClick={closeNavHandler}
