@@ -21,7 +21,9 @@ export interface AppCtxObj {
 	closeModal: VoidFn;
 	theme: string;
 	changeTheme: ChangeThemeFn;
-	toggleTheme: VoidFn
+	toggleTheme: VoidFn;
+	isPreviewVisible: boolean;
+	togglePreview: VoidFn;
 }
 
 // reusable components
@@ -58,4 +60,9 @@ export interface NavThemeTogglerProps {
 
 export interface ModalProps {
 	onCloseModal: VoidFn;
+}
+
+export interface BreadcrumbNavProps {
+	preview: boolean;
+	togglePreview: VoidFn;
 }

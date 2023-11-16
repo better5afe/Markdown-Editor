@@ -16,7 +16,10 @@ const Main = () => {
 			}`}
 			onClick={closeNavHandler}
 		>
-			<BreadcrumbNav />
+			<BreadcrumbNav
+				preview={appCtx.isPreviewVisible}
+				togglePreview={appCtx.togglePreview}
+			/>
 		</main>
 	);
 };

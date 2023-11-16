@@ -11,4 +11,6 @@ export const AppCtx = React.createContext<AppCtxObj>({
 	theme: '',
 	changeTheme: (theme) => {},
 	toggleTheme: () => {},
+	isPreviewVisible: false,
+	togglePreview: () => {},
 });
